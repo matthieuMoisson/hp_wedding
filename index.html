@@ -1,0 +1,423 @@
+﻿<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Notre mariage</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Site regroupant les différentes configurations des ordinateurs en fonction de ses besoins." />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--<script src="js/jquery-3.0.0.min.js"></script>-->
+    <script type='text/javascript'>
+        $(document).ready(function() {
+            $("#emplois").hide(1000);
+            $("#projets").hide(1000);
+            $("#stages").show(1000);
+            $("#lang").hide(1000);
+            $("#outil").hide(1000);
+            $("#fram").hide(1000);
+            $("#ide").hide(1000);
+            $("#sgbd").hide(1000);
+            $("#languages").hide(1000);
+            $("#prog").hide(1000);
+            $("#meca").hide(1000);
+            $("#elec").hide(1000);
+            $("#autom").hide(1000);
+            $("#autre").hide(1000);
+            $("#bouton_stages").addClass("encours");
+            $("#bouton_intro").addClass("encours");
+            $('html, body').animate({
+                scrollTop: $("#accueil").offset().top
+            }, 1000);
+        });
+
+        function scrollbouton(bouton) {
+            $('html, body').animate({
+                scrollTop: $('#' + bouton).offset().top
+            }, 1000);
+            $("#bouton_intro").removeClass("encours");
+            $("#bouton_blog").removeClass("encours");
+            $("#bouton_invites").removeClass("encours");
+            $("#bouton_mesconnaissances").removeClass("encours");
+            $("#bouton_interet").removeClass("encours");
+            if (bouton == "accueil") {
+                $("#bouton_intro").addClass("encours");
+            }
+            if (bouton == "blog") {
+                $("#bouton_blog").addClass("encours");
+            }
+            if (bouton == "invites") {
+                $("#bouton_invites").addClass("encours");
+            }
+            if (bouton == "mesconnaissances") {
+                $("#bouton_mesconnaissances").addClass("encours");
+            }
+            if (bouton == "interet") {
+                $("#bouton_interet").addClass("encours");
+            }
+        }
+
+        function invites(bouton) {
+            $("#stages").hide(1000);
+            $("#bouton_stages").removeClass("encours");
+            $("#projets").hide(1000);
+            $("#bouton_projets").removeClass("encours");
+            $("#emplois").hide(1000);
+            $("#bouton_emplois").removeClass("encours");
+            $("#" + bouton).show(1000);
+            $("#bouton_" + bouton).addClass("encours");
+        }
+
+        function mesconnaissances(bouton) {
+            $("#prog").hide(1000);
+            $("#meca").hide(1000);
+            $("#elec").hide(1000);
+            $("#autom").hide(1000);
+            $("#autre").hide(1000);
+            $("#lang").hide(1000);
+            $("#outil").hide(1000);
+            $("#fram").hide(1000);
+            $("#ide").hide(1000);
+            $("#sgbd").hide(1000);
+            $("#languages").hide(1000);
+            $("#" + bouton).toggle(1000);
+        }
+        $(window).scroll(function() {
+            $("#bouton_intro").removeClass("encours");
+            $("#bouton_blog").removeClass("encours");
+            $("#bouton_invites").removeClass("encours");
+            $("#bouton_mesconnaissances").removeClass("encours");
+            $("#bouton_interet").removeClass("encours");
+            var scrollPos = $(document).scrollTop();
+            var activediv = $(this);
+            if (activediv.position().top <= scrollPos) {
+                $("#bouton_" + activediv).addClass("encours");
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="intro" id="accueil">
+        <div class="contenu_intro">
+            <img src="img/nous.jpg" class="img-circle image" alt="Ma photo" width="800px"/>
+
+            <p class="introduction">Bienvenue sur <b>LE</b> site de notre mariage !</p>
+            <p class="introduction">Pour les apprenties sorcies, c'est très simple : en naviguant sur les différentes rubriques de notre espace, vous découvrirez tout ce qu'il faut savoir sur notre jour <b>J</b>.</b></p>
+            <p class="introduction">Nous comptons aussi sur vous pour apporter votre pierre à l'édifice en postant des petits commentaires dont vous avez le secret.</p>
+            <p class="introduction">Bonne balade :-) !</p>
+
+        </div>
+    </div>
+    <!-------------------------------------------------------------------------------------
+         ------------------------------- Blog mes études -------------------------------
+         -------------------------------------------------------------------------------------->
+    <div class="parcours">
+        <div class="contenu" id="blog">
+            <h1 class="c_parc">Blog</h1>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <p>
+                        Dans les coulisses de l'organisation de notre mariage...
+                    </p>
+                    <p>
+                        Nous ouvrons ici le chapitre des tumultueux préparatifs de notre belle journée. 
+                        Nous y posterons tous les détails sur les différentes étapes, la demande, <b>LA robe</b>, le lieu et <b>le repas</b>.
+                        Nous comptons sur vous pour nous épauler et pourquoi pas nous faire part de vos précieux conseils et/ou bons plans si vous êtes déjà passés par là… 
+                    </p>
+                    <p>
+                        Merci d'avance :-).
+                    </p>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <h2 class="c_parc">La demande</h2>
+                    <div class="col-sm-3"><img src="img/cassis.png" style="width:150px;"></div>
+                    <div class="col-sm-9">
+                        <p>
+                            <b style="color:#116493;">Voyage à cassis</b> Et poc sa fait des chocapic !
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+            <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                        <h2 class="c_parc">La robe</h2>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <h2 class="c_parc">Le lieu et le repas</h2>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+    </div>
+    <div class="invites">
+        <div class="contenu" id="invites">
+            <h1 class="c_invites">Invités</h1>
+            <div class="row">
+                <div class="col-xs-4">
+                    <a href="javascript:invites('stages')" class="col-sm-4 bouton_exp" id="bouton_stages">
+						Mes stages
+					</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="javascript:invites('emplois')" class="col-sm-4 bouton_exp" id="bouton_emplois">
+						Mes emplois
+					</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="javascript:invites('projets')" class="col-sm-4 bouton_exp" id="bouton_projets">
+						Mes projets
+					</a>
+                </div>
+            </div>
+            <div class="contenu_exp" id="stages">
+                <h2 class="c_invites">FEVRIER 2018 – AOUT 2018 (6 mois) Lizeo</h2>
+                <b style="color:#FEA100;">Stagiaire machine learning pour un analyseur de requêtes dans le domaine du pneumatique</b>
+                <p>
+                    <b>
+						Projet : Lizeo est née en 2009. Elle est aujourd’hui présente en Europe mais également dans le monde. 
+						L’entreprise propose un site de vente de pneus en ligne mais également des prestations à fortes valeurs ajoutées aux professionnels à partir de ce qu’ils collectent. 
+						Son effectif actuel est de 6 chercheurs spécialistes en machine Learning et data science dans le pôle R&D. 
+					</b>
+                </p>
+                <p>
+                    La problématique de ce projet est la reconnaissance des éléments de connaissance dans une requête et leurs associations au bon domaine. Il faut mettre en adéquation chaque n-grammes d’une requête en langage naturel avec le domaine correspondant. Il s’agit d’un problème de reconnaissance et de désambiguïsation de termes dans un cadre contraint.
+                </p>
+                <p>
+                    Pour ce faire, j’ai réalisé ce stage dans les locaux de Lizeo avec une équipe de Data Scientistes. Les données mises à disposition sont sous différents formats (<b>Elasticsearch</b>, <b>Data lake</b>, <b>SQL</b>, Fichier texte)
+                </p>
+                <p>
+                    Le travail se décompose en deux étapes : Etat de l’art, puis proposition d’une approche par apprentissage statistique. Ma proposition se base sur une approche de Type machine Learning (<b>Réseau de neurone</b>, <b>RNN</b>).
+                </p>
+                <h2 class="c_invites">SEPTEMBRE 2016 - JANVIER 2017 (6 mois) ElfInfo</h2>
+                <p><b style="color:#FEA100;">Stage d'assistant ingénieur développeur web dans une start-up</b></p>
+                <p>
+                    <b>
+						Projet : Elfinfo est spécialisée dans le développement de progiciels et d'applications appliqués aux besoins des établissements hospitaliers, hôteliers et prestataires de propreté. 
+						Son effectif était inférieur à 10 personnes avec seulement 3 personnes en charge du développement.
+					</b>
+                </p>
+                <p>
+                    Lors de mon premier stage en informatique, j'ai participé au développement d'un progiciel destiné au milieu Hospitalier. Ce stage s'est déroulé au sein d'une start-up dans une pépinière d'entreprise. L'entreprise étant encore jeune, j'ai rapidement du faire preuve d'autonomie. J'ai donc été chargé de réaliser une application de son début à sa fin. Pour ce faire, j'ai analysé les besoins du client, écrit le cahier des charges, proposé des axes d'amélioration, conçu et réalisé l'application. (<b>Symfony</b>, <b>Angular 2</b>)
+                </p>
+            </div>
+            <div class="contenu_exp" id="emplois">
+                <h2 class="c_invites">Janvier 2017 - Juin 2017 (6 mois) Elfinfo</h2>
+                <p><b style="color:#FEA100;">Développeur web dans une start-up</b></p>
+                <p>
+                    <b>
+						Projet : Elfinfo est spécialisée dans le développement de progiciels et d'applications appliqués aux besoins des établissements hospitaliers, hôteliers et prestataires de propreté. 
+						Son effectif était inférieur à 10 personnes avec seulement 3 personnes en charge du développement.
+					</b>
+                </p>
+                <p>
+                    Pour donner suite au précédent stage, j’ai travaillé à distance à temps partiel afin de continuer le développement du progiciel. En effet, une de mes réalisations durant le stage ayant été commercialisée, j’ai pendant 6 mois eu la possibilité de l’améliorer et de la corriger. De plus, j’étais en charge de la correction des différents problèmes du progiciel dans sa généralité. Cela m’a permis de toucher à de nombreuses technologies (<b>AngularJS</b>, <b>Angular 2</b>, <b>Symfony</b>, Base de données)
+                </p>
+                <h2 class="c_invites">Eté 2014</h2>
+                <li>
+                    <b>Veilleur de nuit en foyer logement - </b> Surveillance et réponse aux besoins des personnes âgées.
+                    <li>
+                        <b>Serveur polyvalent - </b> Services lors de mariages, fêtes et manifestations.
+                    </li>
+                    <li>
+                        <b>Caissier dans une piscine municipale - </b> Accueil du public et responsable de caisse.
+                    </li>
+                    <h2 class="c_invites">Août 2013</h2>
+                    <li>
+                        <b>Agent de soins en maison de retraite au Touvet - </b> Accompagnement dans les actes de la vie quotidienne (soins d’hygiène, aide au repas, animations, …).
+                    </li>
+            </div>
+            <div class="contenu_exp" id="projets">
+                <h2 class="c_invites">Années 2017-2018 :</h2>
+                <li>
+                    <b style="color:#FEA100;">Projet kaggle</b> : Participation à mon premier projet <a href="https://www.kaggle.com/c/titanic">kaggle</a>. Ce dernier permet d'appliquer des outils d'apprentissage de machine learning afin de prédire quels passagers ont survécus à la tragédie du titanic. Pour ce faire, des données d'apprentissage et de test sont mises à disposition.
+                </li>
+                <li>
+                    <b style="color:#FEA100;">Projet kaggle</b> : Participation à mon second projet <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques">kaggle</a>. Après avoir réalisé l'introduction, l'énoncé de ce second test s'avère plus complexe et complet. Il dispose de 79 variables explicatives décrivant (presque) tous les aspects de maisons résidentielles dans un secteur donné. Le but est de prédire le prix final de chaque maison.
+                </li>
+                <li>
+                    <b style="color:#FEA100;">Human migration</b> : Dans le cadre du cours de Data visualisation du master nous devions réaliser une page web en thématique avec la mobilité et les transports par groupe de 3. Le rendu final se compose d'une page <a href="https://joymanguljensen.github.io/dataVIz-human-migration/"><b>web</b></a> utilisant le framework <b>D3.js</b>, développée avec la forge GitHub. Un rapport est également disponible <a href="https://github.com/JoymangulJensen/dataVIz-human-migration/blob/master/Reports/Final/studying-human-migration.pdf"><b>ici</b></a>.
+                </li>
+                <img src="img/dataviz.PNG" alt="Data viz" width="200px">
+                <li>
+                    <b style="color:#FEA100;">Queen project</b> : Ce projet consiste en la résolution du problème du positionnement des n-reines sur un plateau d'échec. Trois algorithmes d'optimisation ont été appliqués : Tabou, Recuit Simulé et Génétique. Ce projet scolaire a été <a href="https://github.com/matthieuMoisson/QueensProject">réalisé</a> en équipe de deux, à l'aide de la forge Github, en java.
+                </li>
+                <li>
+                    <b style="color:#FEA100;">Page web personnel</b> : Réalisation de mon CV en <a href="#">ligne</a>. Ce dernier a été réalisé en HTML/CSS avec également du java script afin de le rendre plus dynamique.
+                </li>
+            </div>
+            <div class="row" style="margin-bottom:30px;">
+            </div>
+        </div>
+    </div>
+    <div class="connaissance">
+        <div class="contenu" id="mesconnaissances">
+            <h1 class="c_connaissance">Mes connaissances</h1>
+            <div class="col-xs-4">
+                <div class="row" style="margin-bottom:10px;">
+                    <a href="javascript:mesconnaissances('lang')">
+                        <h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Langues</h2>
+                    </a>
+                    <p>
+                        <div id="lang">
+                            <li>Anglais : score TOEIC : <b style="color:#FF073A;">790</b>.</li>
+                        </div>
+                    </p>
+                </div>
+                <div class="row" style="margin-bottom:10px;">
+                    <a href="javascript:mesconnaissances('languages')">
+                        <h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Languages</h2>
+                    </a>
+                    <p>
+                        <div id="languages">
+                            <li>Scala</li>
+                            <li>Spark</li>
+                            <li>Python</li>
+                            <li>R</li>
+                            <li>Java</li>
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>C#</li>
+                            <li>Bash</li>
+                            <li>SQL</li>
+                            <li>SAS</li>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="row" style="margin-bottom:10px;">
+                    <a href="javascript:mesconnaissances('outil')">
+                        <h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Outils</h2>
+                    </a>
+                    <p>
+                        <div id="outil">
+                            <li>Git</li>
+                            <li>Trello</li>
+                            <li>Altassian</li>
+                            <li>Slack</li>
+                            <li>Mattermost</li>
+                        </div>
+                    </p>
+                </div>
+                <div class="row" style="margin-bottom:10px;">
+                    <a href="javascript:mesconnaissances('fram')">
+                        <h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>Frameworks</h2>
+                    </a>
+                    <p>
+                        <div id="fram">
+                            <li>MlLib</li>
+                            <li>Breeze</li>
+                            <li>Scikit-Learn</li>
+                            <li>Symfony</li>
+                            <li>AngularJS</li>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="row" style="margin-bottom:10px;">
+                    <a href="javascript:mesconnaissances('sgbd')">
+                        <h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>SGBD</h2>
+                    </a>
+                    <p>
+                        <div id="sgbd">
+                            <li>MySQL</li>
+                            <li>Oracle</li>
+                        </div>
+                    </p>
+                </div>
+                <div class="row" style="margin-bottom:10px;">
+                    <a href="javascript:mesconnaissances('ide')">
+                        <h2 class="c_connaissance"><span class="glyphicon glyphicon-hand-right" style="text-align:center;"></span>IDE</h2>
+                    </a>
+                    <p>
+                        <div id="ide">
+                            <li>Intellij</li>
+                            <li>Visual Studio</li>
+                            <li>Eclipse</li>
+                            <li>NetBean</li>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+	</div>
+
+    <div class="connaissance">
+        <div class="contenu" id="interet">
+            <h1 class="c_interet">Mes Centres d'intérêt</h1>
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail">
+                        <img src="img/moi.jpg" alt="Moi" width="200px">
+                        <div class="caption">
+                            <h2 class="c_interet">Sport</h2>
+                            <p>
+                                <li><b class="c_interet">Course à pied</b> en compétition</li>
+                                <li><b class="c_interet">Parapente</b></li>
+                                <li><b class="c_interet">Vélo</b> de route</li>
+                                <li><b class="c_interet">Randonnée</b> en montagne</li>
+                                <li><b class="c_interet">Aviron</b></li>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail">
+                        <img src="img/livre.jpg" alt="Moi" width="200px">
+                        <div class="caption">
+                            <h2 class="c_interet">Lecture</h2>
+                            <p>
+                                <li>Magazine <b class="c_interet">scientifique</b></li>
+                                <li>Romans d’héroïque fantaisie</li>
+                                <li>Presse <b class="c_interet">quotidienne</b> régionale</li>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail">
+                        <img src="img/meetup.PNG" alt="Moi" width="200px">
+                        <div class="caption">
+                            <h2 class="c_interet">MeetUp</h2>
+                            <p>
+                                <li><b class="c_interet">Data Science</b></li>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	
+	<div class="funyGame">
+		<div class="contenu" id="funyGame">
+			
+		</div>
+	</div>
+
+    <div id="menu">
+        <a href="javascript:scrollbouton('accueil')" class="bouton_intro" id="bouton_intro">Accueil</a>
+        <a href="javascript:scrollbouton('blog')" class="bouton_blog" id="bouton_blog">Blog</a>
+        <a href="javascript:scrollbouton('invites')" class="bouton_invites" id="bouton_invites">Mon expérience</a>
+        <a href="javascript:scrollbouton('mesconnaissances')" class="bouton_mesconnaissances" id="bouton_mesconnaissances">Mes connaissances</a>
+        <a href="javascript:scrollbouton('interet')" class="bouton_interet" id="bouton_interet">Mes Centres d’intérêt</a>
+    </div>
+</body>
+
+</html>
