@@ -11,15 +11,9 @@ a,a:hover,a:link,a:visited,a:active
 }
 p
 {
-	font-size:170%;
+	font-size:150%;
 	color:black;
 }
-.text_area
-{
-	background-color:white;
-	opacity: 0.7;
-}
-
 h1
 {
 	color:grey;
@@ -27,15 +21,17 @@ h1
 	font-family: Segoe UI, sans-serif;
 	font-size: 150%;
 	margin-bottom:4%;
-	padding-bottom: 2%;
+	padding-bottom: 1%;
 	border-bottom: solid 1px grey;
+	margin: 0px;
+	
 }
 h2
 {
 	color:black;
 	text-align: left;
 	font-family: Segoe UI, sans-serif;
-	font-size: 130%;
+	font-size: 100%;
 	text-decoration: none;
 }
 span
@@ -54,15 +50,50 @@ li
 }
 
 .c_pres
-{color:black;}
+{
+	color:black;
+	border-color :black;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
 .c_parc
-{color:#116493;border-color :#116493;}
-.c_invites
-{color:#D7781A;border-color :#FEA100;}
+{
+	color:#116493;
+	border-color :#116493;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+.c_exp
+{
+	color:#D7781A;
+	border-color :#FEA100;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
 .c_connaissance
-{color:#CC052E;border-color :#FF073A;}
+{
+	color:#CC052E;
+	border-color :#FF073A;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+.c_famille{
+	color:#CC052E;
+	border-color :#FF073A;
+	font-weight: bold;
+}
 .c_interet
-{color:#519500;border-color :#519500;}
+{
+	color:#519500;
+	border-color :#519500;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
 .intro
 {
   background: url(../img/maison.png) no-repeat center fixed;
@@ -70,9 +101,19 @@ li
   background-size: cover; /* version standardisÃ©e */
   min-height:100%;
   width:100%;
-  height:950px;
+  height:1080px;
 }
-.parcours, .connaissance
+.interet
+{
+  background: url(../img/poudlard_1_.png) no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisÃ©e */
+  margin-top:0;
+  min-height:100%;
+  width:100%;
+  height:1080px;
+}
+.connaissance
 {
   background: url(../img/Poudlard_sous_la_neige.jpg) no-repeat center fixed;
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
@@ -80,9 +121,19 @@ li
   margin-top:0;
   min-height:100%;
   width:100%;
-  height:1600;
+  height:1080px;
 }
-.invites, .interet
+.parcours
+{
+  background: url(../img/lune.png) no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisÃ©e */
+  margin-top:0;
+  min-height:100%;
+  width:100%;
+  height:1080px;
+}
+.experience
 {
   background: url(../img/trio.jpg) no-repeat center fixed;
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
@@ -90,19 +141,70 @@ li
   margin-top:0;
   min-height:100%;
   width:100%;
-  height:1600;
+  height:1080px;
 }
-
 
 .contenu_intro
 {
-	padding-top:50px;
-	margin-left:3%;
-	padding-bottom:10px;
-	min-height:100%;
-	width:90%;
+	/* padding-top:2%; */
+	margin-left:10%;
+	/* padding-bottom:5%; */
+	min-height:50%;
+	width:50%;
+	background-color: white;
 }
 
+.contenu
+{
+	padding-top:2%;
+	margin-left:10%;
+	/* padding-bottom:5%; */
+	height:100%;
+	width:50%;
+	background-color: white;
+}
+.contenu_exp
+{
+	padding:2%;
+}
+.contenu_parc
+{
+	padding:2%;
+}
+.image
+{
+	text-align:center;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:20px;
+}
+.bouton_parc,.bouton_parc:visited,.bouton_parc:link
+{
+	display:inline-block;
+	background-color:#116493;
+	padding-top:2%;
+	padding-bottom:2%;
+	width:100%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	color:white;
+	font-family: Segoe UI, sans-serif;
+	font-size:120%;
+	border-bottom:5px solid #06283a;
+	text-decoration: none;
+	transition: background 0.5s;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.bouton_parc:hover,.bouton_parc:active,.bouton_parc:focus,.bouton_parc.encours
+{
+	background-color:white;
+	display:inline-block;
+	color:#116493;
+	text-decoration: none;
+}
 
 .bouton_exp,.bouton_exp:visited,.bouton_exp:link
 {
@@ -157,7 +259,7 @@ li
 	color:rgba(24,28,27,1);
 	text-decoration: none;
 }
-.bouton_blog,.bouton_blog:visited,.bouton_blog:link
+.bouton_monparcours,.bouton_monparcours:visited,.bouton_monparcours:link
 {
 	padding:20px;
 	background-color:#116493;
@@ -176,14 +278,14 @@ li
 	text-decoration: none;
 	transition: background 0.5s;
 }
-.bouton_blog:hover,.bouton_blog:active,.bouton_blog:focus,.bouton_blog.encours
+.bouton_monparcours:hover,.bouton_monparcours:active,.bouton_monparcours:focus,.bouton_monparcours.encours
 {
 	background-color:white;
 	display:inline-block;
 	color:#116493;
 	text-decoration: none;
 }
-.bouton_invites,.bouton_invites:visited,.bouton_invites:link
+.bouton_experience,.bouton_experience:visited,.bouton_experience:link
 {
 	padding:20px;
 	background-color:#FEA100;
@@ -203,7 +305,7 @@ li
 	transition: background 0.5s;
 }
 
-.bouton_invites:hover,.bouton_invites:active,.bouton_invites:focus,.bouton_invites.encours
+.bouton_experience:hover,.bouton_experience:active,.bouton_experience:focus,.bouton_experience.encours
 {
 	background-color:white;
 	display:inline-block;
@@ -284,7 +386,7 @@ li
 	text-decoration: none;
 	transition: background 0.5s;
 }
-.bouton_blog,.bouton_blog:visited,.bouton_blog:link
+.bouton_monparcours,.bouton_monparcours:visited,.bouton_monparcours:link
 {
 	padding:10px;
 	background-color:#116493;
@@ -303,7 +405,7 @@ li
 	text-decoration: none;
 	transition: background 0.5s;
 }
-.bouton_invites,.bouton_invites:visited,.bouton_invites:link
+.bouton_experience,.bouton_experience:visited,.bouton_experience:link
 {
 	padding:10px;
 	background-color:#FEA100;
@@ -367,14 +469,14 @@ li
 	color:rgba(24,28,27,1);
 	text-decoration: none;
 }
-.bouton_blog:hover,.bouton_blog:active,.bouton_blog:focus
+.bouton_monparcours:hover,.bouton_monparcours:active,.bouton_monparcours:focus
 {
 	background-color:white;
 	display:inline-block;
 	color:#116493;
 	text-decoration: none;
 }
-.bouton_invites:hover,.bouton_invites:active,.bouton_invites:focus
+.bouton_experience:hover,.bouton_experience:active,.bouton_experience:focus
 {
 	background-color:white;
 	display:inline-block;
@@ -396,7 +498,7 @@ li
 	text-decoration: none;
 }
 }
-@media screen and (max-width: 1500px){
+@media screen and (max-width: 759px){
 .contenu
 {
 	margin-left:5%;
@@ -429,7 +531,7 @@ li
 	font-size: 0%;
 	transition: background 0.5s;
 }
-.bouton_blog,.bouton_blog:visited,.bouton_blog:link
+.bouton_monparcours,.bouton_monparcours:visited,.bouton_monparcours:link
 {
 	position:fixed;
 	top:30%;
@@ -441,7 +543,7 @@ li
 	font-size: 0%;
 	transition: background 0.5s;
 }
-.bouton_invites,.bouton_invites:visited,.bouton_invites:link
+.bouton_experience,.bouton_experience:visited,.bouton_experience:link
 {
 	position:fixed;
 	top:47.5%;
@@ -465,7 +567,7 @@ li
 	font-size: 0%;
 	transition: background 0.5s;
 }
-.bouton_intro:hover,.bouton_intro:active,.bouton_intro.encours,.bouton_interet:hover,.bouton_interet.encours,.bouton_interet:active,.bouton_interet:focus,.bouton_mesconnaissances.encours,.bouton_mesconnaissances:hover,.bouton_mesconnaissances:active,.bouton_mesconnaissances:focus,.bouton_invites:hover,.bouton_invites:active,.bouton_invites.encours,.bouton_invites:focus,.bouton_intro:focus,.bouton_blog:hover,.bouton_blog.encours,.bouton_blog:active,.bouton_blog:focus
+.bouton_intro:hover,.bouton_intro:active,.bouton_intro.encours,.bouton_interet:hover,.bouton_interet.encours,.bouton_interet:active,.bouton_interet:focus,.bouton_mesconnaissances.encours,.bouton_mesconnaissances:hover,.bouton_mesconnaissances:active,.bouton_mesconnaissances:focus,.bouton_experience:hover,.bouton_experience:active,.bouton_experience.encours,.bouton_experience:focus,.bouton_intro:focus,.bouton_monparcours:hover,.bouton_monparcours.encours,.bouton_monparcours:active,.bouton_monparcours:focus
 {
 	background-color:white;
 	text-decoration: none;
